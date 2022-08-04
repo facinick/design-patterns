@@ -44,6 +44,9 @@ abstract class PizzaStore {
   // encapsulates it in subclass thereby decoupling
   // client code in this class from object creation code
   // in subclass
+
+  // this can be defined instead of abstract,
+  // that way we will have a default way to create pizza
   abstract createPizza(pizzaType: PIZZA_TYPE): Pizza;
 }
 

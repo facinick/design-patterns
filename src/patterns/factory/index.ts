@@ -1,8 +1,8 @@
 import ChicagoPizzaStore from './stores/chicago_pizza';
-import { PIZZA_TYPE } from './stores/pizza_store';
+import PizzaStore, { PIZZA_TYPE } from './stores/pizza_store';
 
 function run() {
-  const pizzaStore = new ChicagoPizzaStore();
+  const pizzaStore: PizzaStore = new ChicagoPizzaStore();
   pizzaStore.orderPizza(PIZZA_TYPE.CLAM);
 }
 
