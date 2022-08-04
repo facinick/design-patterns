@@ -10,7 +10,7 @@ class ChicagoClamPizza extends Pizza {
     this.name = 'chicago style clam pizza';
     this.dough = 'thic crust';
     this.sauce = 'salted pepper sauce';
-    this.toppings = ['grated ragino cheese', 'dried clams'];
+    this.toppings = ['grated ragino cheese', 'dried clams', 'white cheese'];
   }
   cut(): void {
     console.log(`cutting into squares`);

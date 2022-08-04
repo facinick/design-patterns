@@ -10,7 +10,12 @@ class ChicagoPepperoniPizza extends Pizza {
     this.name = 'chicago style pepperoni pizza';
     this.dough = 'thic crust';
     this.sauce = 'salted pepper sauce';
-    this.toppings = ['grated ragino cheese', 'pepperoni sliced'];
+    this.toppings = [
+      'grated ragino cheese',
+      'pepperoni sliced',
+      'blue cheese',
+      'milk',
+    ];
   }
   cut(): void {
     console.log(`cutting into squares`);
