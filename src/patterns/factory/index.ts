@@ -1,10 +1,9 @@
-import PizzaStore from './pizza_store';
-import SimplePizzaFactory, { PIZZA_TYPE } from './simple_pizza_factory';
+import ChicagoPizzaStore from './stores/chicago_pizza';
+import { PIZZA_TYPE } from './stores/pizza_store';
 
 function run() {
-  const simplePizzaFactory = new SimplePizzaFactory();
-  const pizzaStore = new PizzaStore(simplePizzaFactory);
-  pizzaStore.orderPizza(PIZZA_TYPE.PEPPERONI);
+  const pizzaStore = new ChicagoPizzaStore();
+  pizzaStore.orderPizza(PIZZA_TYPE.CLAM);
 }
 
 export default run;
