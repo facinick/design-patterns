@@ -26,6 +26,7 @@
 - ### Program to interface, not inheritance
 - ### Strive for loosely coupled designs between objects that interact
 - ### Classes should be open for extension, but closed for modification
+- ### Depend on abstractions. Do not depend on concrete classes.
 ---
 ## OO Patterns
 ### Strategy:
@@ -42,4 +43,15 @@ attaches additional responsibilities to an object dynamically. Decorators provid
 
 ### Factory:
 
+#### Static Factory
+
 defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+#### Abstract Factory
+
+TODO
+
+### Singleton:
+
+ensures a class has only one
+instance, and provides a global point of access to it.
