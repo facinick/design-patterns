@@ -55,3 +55,7 @@ TODO
 
 ensures a class has only one
 instance, and provides a global point of access to it.
+
+### Command:
+
+encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests and support undo-able operations.
