@@ -59,3 +59,8 @@ instance, and provides a global point of access to it.
 ### Command:
 
 encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests and support undo-able operations.
+
+### Adapter:
+
+converts the interface of a class into another interface the clients expect. Adapter lets
+classes work together that couldn’t otherwise because of incompatible interfaces.
