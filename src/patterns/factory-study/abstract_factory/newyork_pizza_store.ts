@@ -1,5 +1,6 @@
 import NewyorkClamPizza from "../pizza/new_york/clam";
 import NewyorkPepperoniPizza from "../pizza/new_york/pepperoni";
+
 import AllPizzaStore, { PizzaType } from "./pizza_store";
 
 class NewyorkPizzaStore extends AllPizzaStore {
