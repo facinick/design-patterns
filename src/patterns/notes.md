@@ -27,6 +27,8 @@
 - ### Strive for loosely coupled designs between objects that interact
 - ### Classes should be open for extension, but closed for modification
 - ### Depend on abstractions. Do not depend on concrete classes.
+- ### Only talk to your friends
+- ### Don't call us, we will call you
 ---
 ## OO Patterns
 ### Strategy:
@@ -68,3 +70,7 @@ classes work together that couldn’t otherwise because of incompatible interfac
 ### Facade:
 
 provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
+
+### Template:
+
+defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
