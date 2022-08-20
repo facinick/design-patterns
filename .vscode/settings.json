@@ -8,7 +8,50 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/node_modules": true
-  }
+    ".vscode/": true,
+    "yarn.lock": true,
+    ".editorconfig": true,
+    ".eslintrc.json": true,
+    ".gitignore": true,
+    ".prettierignore": true,
+    "LICENSE": true,
+    "package.json": true,
+    "README.md": true,
+    "tsconfig.json": true,
+    "tsconfig.module.json": true,
+    ".github/": true,
+    "node_modules/": true
+  },
+  "hidefiles.configurationType": "local",
+  "hidefiles.globalConfig": {
+    "profiles": [
+      {
+        "name": "Default",
+        "detail": "",
+        "description": "Test",
+        "hidden": [".vscode/"]
+      },
+      {
+        "name": "Strict",
+        "detail": "Hide everything not immediately required",
+        "hidden": [
+          "$Default",
+          "yarn.lock",
+          ".editorconfig",
+          ".eslintrc.json",
+          ".gitignore",
+          ".prettierignore",
+          "LICENSE",
+          "package.json",
+          "README.md",
+          "tsconfig.json",
+          "tsconfig.module.json",
+          ".editorconfig",
+          ".github/",
+          "node_modules/"
+        ]
+      }
+    ]
+  },
+  "hidefiles.selectedProfile": "Strict"
 }

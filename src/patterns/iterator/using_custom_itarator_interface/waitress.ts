@@ -1,5 +1,6 @@
-import MenuItem from "./menu_item/menu_item";
-import { Aggregate, IteratorObject } from "./using_custom_itarator_interface/iterator_interfaces/iterator_interfaces";
+import MenuItem from "../menu_item/menu_item";
+
+import { Aggregate, IteratorObject } from "./iterator_interfaces/iterator_interfaces";
 
 /* Waitress doesn't know anything about the individual menu implementations, all she knows is
 * the menu iterators have a common interface that she can use to iterate the menus
