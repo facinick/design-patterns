@@ -1,6 +1,6 @@
+import MenuItem, { MenuItemProps } from "../../menu_item/menu_item"
 import DinerMenuIterator from "../collection_iterators/diner_menu_iterator"
 import { Aggregate, IteratorObject } from "../iterator_interfaces/iterator_interfaces"
-import MenuItem, { MenuItemProps } from "../menu_item/menu_item"
 
 class DinerHouseMenu implements Aggregate<MenuItem> {
 

@@ -1,5 +1,5 @@
+import MenuItem from "../../menu_item/menu_item";
 import { IteratorObject } from "../iterator_interfaces/iterator_interfaces";
-import MenuItem from "../menu_item/menu_item";
 
 class DinerMenuIterator implements IteratorObject<MenuItem> {
 
