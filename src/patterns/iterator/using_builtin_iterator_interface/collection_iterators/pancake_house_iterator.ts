@@ -9,7 +9,7 @@ class PancakeHouseMenuIterator implements Iterator<MenuItem> {
     this._menuItems = menuItems
   }
 
-  hasNext() {
+  private hasNext() {
     if (this.position >= 0 && this.position < this._menuItems.length) {
       return true
     }
@@ -19,9 +19,10 @@ class PancakeHouseMenuIterator implements Iterator<MenuItem> {
 
   next() {
     const menuItem: MenuItem = this._menuItems[this.position]
+    const done = !this.hasNext()
     this.position = this.position + 1
     return {
-      done: !this.hasNext(),
+      done,
       value: menuItem
     }
   }

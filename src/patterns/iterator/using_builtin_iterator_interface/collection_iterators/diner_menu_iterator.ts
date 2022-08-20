@@ -9,7 +9,7 @@ class DinerMenuIterator implements Iterator<MenuItem> {
     this._menuItems = menuItems
   }
 
-  hasNext() {
+  private hasNext() {
     if (this.position >= 0 && this.position < this._menuItems.size && this._menuItems.has(this.position)) {
       return true
     }
@@ -20,9 +20,10 @@ class DinerMenuIterator implements Iterator<MenuItem> {
   next() {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const menuItem: MenuItem = this._menuItems.get(this.position)!
+    const done = !this.hasNext()
     this.position = this.position + 1
     return {
-      done: !this.hasNext(),
+      done,
       value: menuItem
     }
   }

@@ -16,7 +16,7 @@ function run() {
 
   // waitress.printMenu()
 
-  const waitress: Waitress = new Waitress([new DinerHouseMenu(), new PancakeHouseMenu(),])
+  const waitress: Waitress = new Waitress([new DinerHouseMenu(), new PancakeHouseMenu()])
   waitress.printMenu()
 
 }

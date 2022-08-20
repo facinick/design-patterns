@@ -14,7 +14,7 @@ class PancakeHouseMenu implements Iterable<MenuItem> {
     })
   }
 
-  addItem({ name, description, price, vegetarian }: MenuItemProps) {
+  private addItem({ name, description, price, vegetarian }: MenuItemProps) {
     const menuItem: MenuItem = new MenuItem({
       name,
       description,

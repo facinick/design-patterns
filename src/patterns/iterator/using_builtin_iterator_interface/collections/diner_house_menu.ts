@@ -4,7 +4,7 @@ import DinerMenuIterator from "../collection_iterators/diner_menu_iterator"
 class DinerHouseMenu implements Iterable<MenuItem> {
 
   private _menuItems: Map<number, MenuItem> = new Map<number, MenuItem>()
-  private index = -1
+  private index = 0
 
   constructor() {
     this.addItem({
@@ -15,23 +15,21 @@ class DinerHouseMenu implements Iterable<MenuItem> {
     })
 
     this.addItem({
-      name: "Pasta",
-      description: "Squigly pasta",
-      price: 22.22,
-      vegetarian: false,
-    })
-
-    this.addItem({
       name: "Rotto",
       description: "The best juicy rotto in town, ratatata!",
       price: 199.99,
       vegetarian: true,
     })
+
+    this.addItem({
+      name: "Pasta",
+      description: "Squigly pasta",
+      price: 22.22,
+      vegetarian: false,
+    })
   }
 
-  addItem({ name, description, price, vegetarian }: MenuItemProps) {
-
-    this.index = this.index + 1
+  private addItem({ name, description, price, vegetarian }: MenuItemProps) {
 
     const menuItem: MenuItem = new MenuItem({
       name,
@@ -41,6 +39,8 @@ class DinerHouseMenu implements Iterable<MenuItem> {
     })
 
     this._menuItems.set(this.index, menuItem)
+
+    this.index = this.index + 1
   }
 
   [Symbol.iterator](): Iterator<MenuItem> {
