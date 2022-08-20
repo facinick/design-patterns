@@ -1,7 +1,7 @@
 import MenuItem from '../../menu_item/menu_item';
-import { IteratorObject } from '../iterator_interfaces/iterator_interfaces';
+import { MenuIterator } from '../iterator_interfaces/iterator_interfaces';
 
-class DinerMenuIterator implements IteratorObject<MenuItem> {
+class DinerMenuIterator implements MenuIterator {
   private _menuItems: Map<number, MenuItem> = new Map();
   private position = 0;
 

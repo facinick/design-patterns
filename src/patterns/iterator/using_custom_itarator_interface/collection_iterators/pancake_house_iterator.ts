@@ -1,7 +1,7 @@
 import MenuItem from '../../menu_item/menu_item';
-import { IteratorObject } from '../iterator_interfaces/iterator_interfaces';
+import { MenuIterator } from '../iterator_interfaces/iterator_interfaces';
 
-class PancakeHouseMenuIterator implements IteratorObject<MenuItem> {
+class PancakeHouseMenuIterator implements MenuIterator {
   private _menuItems: Array<MenuItem> = [];
   private position = 0;
 

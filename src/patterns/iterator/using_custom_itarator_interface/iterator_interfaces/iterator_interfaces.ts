@@ -1,4 +1,7 @@
 // These will be implemented by Collection Iterator classes, whose sole purpose of existence
+
+import MenuItem from "../../menu_item/menu_item";
+
 // is to encap iteration. They'll take in Aggregate and provide ways to iterate
 interface IteratorObject<T> {
   hasNext: () => boolean;
@@ -10,4 +13,7 @@ interface Aggregate<T> {
   createIterator: () => IteratorObject<T>;
 }
 
-export { Aggregate, IteratorObject };
+type Menu = Aggregate<MenuItem>
+type MenuIterator = IteratorObject<MenuItem>
+
+export { Aggregate, IteratorObject, Menu, MenuIterator };

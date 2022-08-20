@@ -1,8 +1,7 @@
-import MenuItem from '../menu_item/menu_item';
 
 import {
-  Aggregate,
-  IteratorObject,
+  Menu,
+  MenuIterator,
 } from './iterator_interfaces/iterator_interfaces';
 
 /* Waitress doesn't know anything about the individual menu implementations, all she knows is
@@ -10,20 +9,20 @@ import {
  */
 
 class Waitress {
-  private menus: Array<Aggregate<MenuItem>> = [];
+  private menus: Array<Menu> = [];
 
-  constructor(menus: Array<Aggregate<MenuItem>>) {
+  constructor(menus: Array<Menu>) {
     this.menus = menus;
   }
 
   printMenu() {
     this.menus.forEach((menu) => {
-      const menuIterator: IteratorObject<MenuItem> = menu.createIterator();
+      const menuIterator: MenuIterator = menu.createIterator();
       this._printMenu(menuIterator);
     });
   }
 
-  private _printMenu(menuIterator: IteratorObject<MenuItem>) {
+  private _printMenu(menuIterator: MenuIterator) {
     while (menuIterator.hasNext()) {
       const menuItem = menuIterator.next();
       console.log(`menu item: ${menuItem.name} for $${menuItem.price}`);

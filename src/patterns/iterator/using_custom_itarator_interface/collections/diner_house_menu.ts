@@ -1,13 +1,13 @@
 import MenuItem, { MenuItemProps } from '../../menu_item/menu_item';
 import DinerMenuIterator from '../collection_iterators/diner_menu_iterator';
 import {
-  Aggregate,
   IteratorObject,
+  Menu,
 } from '../iterator_interfaces/iterator_interfaces';
 
-class DinerHouseMenu implements Aggregate<MenuItem> {
+class DinerHouseMenu implements Menu {
   private _menuItems: Map<number, MenuItem> = new Map<number, MenuItem>();
-  private index = -1;
+  private index = 0;
 
   constructor() {
     this.addItem({
@@ -33,7 +33,6 @@ class DinerHouseMenu implements Aggregate<MenuItem> {
   }
 
   addItem({ name, description, price, vegetarian }: MenuItemProps) {
-    this.index = this.index + 1;
 
     const menuItem: MenuItem = new MenuItem({
       name,
@@ -43,6 +42,8 @@ class DinerHouseMenu implements Aggregate<MenuItem> {
     });
 
     this._menuItems.set(this.index, menuItem);
+
+    this.index = this.index + 1;
   }
 
   createIterator(): IteratorObject<MenuItem> {
