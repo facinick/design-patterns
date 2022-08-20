@@ -12,13 +12,15 @@
     - Function overloading
     - Operator overloading
   - Run time
-- ### Abstraction 
+- ### Abstraction
   A programming methodology concerned with displaying only the relevant aspect to the user
   - Abstract class
   - Interface
 - ### Encaptulation
   process of keeping classes private so they cannot be modified by external codes.
+
 ---
+
 ## OO Principles
 
 - ### Encapsulate what varies
@@ -29,8 +31,11 @@
 - ### Depend on abstractions. Do not depend on concrete classes.
 - ### Only talk to your friends
 - ### Don't call us, we will call you
+
 ---
+
 ## OO Patterns
+
 ### Strategy:
 
 defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
@@ -74,3 +79,7 @@ provides a unified interface to a set of interfaces in a subsystem. Facade defin
 ### Template:
 
 defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+### Iterator:
+
+provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
