@@ -1,5 +1,6 @@
-import DinerHouseMenu from "./collections/diner_house_menu"
-import PancakeHouseMenu from "./collections/pancake_house_menu"
+
+import DinerHouseMenu from "./using_custom_itarator_interface/collections/diner_house_menu"
+import PancakeHouseMenu from "./using_custom_itarator_interface/collections/pancake_house_menu"
 import Waitress from "./waitress"
 
 function run() {
