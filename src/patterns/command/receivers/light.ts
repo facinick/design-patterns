@@ -1,30 +1,25 @@
 interface Light {
-  on(): void
-  off(): void
+  on(): void;
+  off(): void;
 }
 
 class PhilipsLight implements Light {
   on(): void {
-    console.log(`on`)
+    console.log(`on`);
   }
   off(): void {
-    console.log(`off`)
+    console.log(`off`);
   }
-
 }
 
 class NormalLight implements Light {
   on(): void {
-    console.log(`on`)
+    console.log(`on`);
   }
   off(): void {
-    console.log(`off`)
+    console.log(`off`);
   }
-
 }
 
-export default Light
-export {
-  PhilipsLight,
-  NormalLight,
-}
+export default Light;
+export { PhilipsLight, NormalLight };

@@ -1,6 +1,6 @@
 interface Command {
-  execute(): void
-  undo(): void
+  execute(): void;
+  undo(): void;
 }
 
-export default Command
+export default Command;

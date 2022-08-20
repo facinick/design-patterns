@@ -1,19 +1,20 @@
-import NewyorkClamPizza from "../pizza/new_york/clam";
-import NewyorkPepperoniPizza from "../pizza/new_york/pepperoni";
-import PizzaFactory from "./pizza_factory";
-import { PizzaType } from "./pizza_store";
+import NewyorkClamPizza from '../pizza/new_york/clam';
+import NewyorkPepperoniPizza from '../pizza/new_york/pepperoni';
+
+import PizzaFactory from './pizza_factory';
+import { PizzaType } from './pizza_store';
 
 class NewyorkPizzaFactory implements PizzaFactory {
   createPizza(pizzaType: PizzaType) {
     let pizza;
     if (pizzaType === PizzaType.clam) {
-      pizza = new NewyorkClamPizza()
+      pizza = new NewyorkClamPizza();
     } else if (pizzaType === PizzaType.pepperoni) {
-      pizza = new NewyorkPepperoniPizza()
+      pizza = new NewyorkPepperoniPizza();
     }
 
-    return pizza
+    return pizza;
   }
 }
 
-export default NewyorkPizzaFactory
+export default NewyorkPizzaFactory;

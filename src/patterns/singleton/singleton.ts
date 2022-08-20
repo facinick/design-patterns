@@ -1,22 +1,22 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 class Singleton {
-  private static uniqueInstance: Singleton | undefined
+  private static uniqueInstance: Singleton | undefined;
 
-  private constructor() { }
+  private constructor() {}
 
   static getInstance(): Singleton {
-
     if (!this.uniqueInstance) {
-      this.uniqueInstance = new Singleton()
+      this.uniqueInstance = new Singleton();
     }
 
-    return this.uniqueInstance
+    return this.uniqueInstance;
   }
 
-  // other methods 
+  // other methods
 
   display() {
-    console.log(`hello singleton`)
+    console.log(`hello singleton`);
   }
 }
 
-export default Singleton
+export default Singleton;

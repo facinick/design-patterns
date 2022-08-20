@@ -1,10 +1,10 @@
-import Command from "../command";
+/* eslint-disable @typescript-eslint/no-empty-function */
+import Command from '../command';
 
 class NoCommand implements Command {
+  execute(): void {}
 
-  execute(): void { }
-
-  undo(): void { }
+  undo(): void {}
 }
 
-export default NoCommand
+export default NoCommand;

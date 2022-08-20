@@ -7,20 +7,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true,
-    ".vscode/": true,
-    "yarn.lock": true,
-    ".editorconfig": true,
-    ".eslintrc.json": true,
-    ".gitignore": true,
-    ".prettierignore": true,
-    "LICENSE": true,
-    "package.json": true,
-    "README.md": true,
-    "tsconfig.json": true,
-    "tsconfig.module.json": true,
-    ".github/": true,
-    "node_modules/": true
+    "**/.DS_Store": true
   },
   "hidefiles.configurationType": "local",
   "hidefiles.globalConfig": {
@@ -53,5 +40,5 @@
       }
     ]
   },
-  "hidefiles.selectedProfile": "Strict"
+  "hidefiles.selectedProfile": "Show All Files"
 }

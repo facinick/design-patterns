@@ -1,14 +1,12 @@
 interface Turkey {
-  gobble(): void
+  gobble(): void;
 }
 
 class MallardTurkey implements Turkey {
   gobble(): void {
-    console.log(`gobble gobble`)
+    console.log(`gobble gobble`);
   }
 }
 
-export default Turkey
-export {
-  MallardTurkey
-}
+export default Turkey;
+export { MallardTurkey };

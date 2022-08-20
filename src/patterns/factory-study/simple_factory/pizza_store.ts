@@ -1,40 +1,34 @@
-import PizzaFactory from "./pizza_factory";
+import PizzaFactory from './pizza_factory';
 
 export enum PizzaType {
-  clam = "clam",
-  pepperoni = "pepperoni",
+  clam = 'clam',
+  pepperoni = 'pepperoni',
 }
 
 export enum PizzaStore {
-  chicago = "chicago",
-  newyork = "newyork",
+  chicago = 'chicago',
+  newyork = 'newyork',
 }
 
-
 class AllPizzaStore {
-
-  pizzaFactory: PizzaFactory
+  pizzaFactory: PizzaFactory;
 
   constructor(pizzaFactory: PizzaFactory) {
-    this.pizzaFactory = pizzaFactory
+    this.pizzaFactory = pizzaFactory;
   }
 
   orderPizza(pizzaType: PizzaType) {
-
-    let pizza;
-
     // ********************************************************* //
-    pizza = this.pizzaFactory.createPizza(pizzaType)
+    const pizza = this.pizzaFactory.createPizza(pizzaType);
     // ********************************************************* //
 
-    pizza?.prepare()
-    pizza?.bake()
-    pizza?.cut()
-    pizza?.box()
+    pizza?.prepare();
+    pizza?.bake();
+    pizza?.cut();
+    pizza?.box();
 
-    return pizza
-
+    return pizza;
   }
 }
 
-export default AllPizzaStore
+export default AllPizzaStore;

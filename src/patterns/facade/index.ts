@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-function run() {
+function run() {}
 
-}
-
-run()
+run();

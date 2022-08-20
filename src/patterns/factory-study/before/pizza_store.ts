@@ -1,38 +1,35 @@
-import ChicagoClamPizza from "../pizza/chicago/clam";
-import ChicagoPepperoniPizza from "../pizza/chicago/pepperoni";
-import NewyorkClamPizza from "../pizza/new_york/clam";
-import NewyorkPepperoniPizza from "../pizza/new_york/pepperoni";
+import ChicagoClamPizza from '../pizza/chicago/clam';
+import ChicagoPepperoniPizza from '../pizza/chicago/pepperoni';
+import NewyorkClamPizza from '../pizza/new_york/clam';
+import NewyorkPepperoniPizza from '../pizza/new_york/pepperoni';
 
 export enum PizzaType {
-  clam = "clam",
-  pepperoni = "pepperoni",
+  clam = 'clam',
+  pepperoni = 'pepperoni',
 }
 
 export enum PizzaStore {
-  chicago = "chicago",
-  newyork = "newyork",
+  chicago = 'chicago',
+  newyork = 'newyork',
 }
 
-
 class AllPizzaStore {
-
   orderPizza(pizzaType: PizzaType, pizzaStore: PizzaStore) {
-
     let pizza;
 
     // ********************************************************* //
 
     if (pizzaStore === PizzaStore.newyork) {
       if (pizzaType === PizzaType.clam) {
-        pizza = new NewyorkClamPizza
+        pizza = new NewyorkClamPizza();
       } else if (pizzaType === PizzaType.pepperoni) {
-        pizza = new NewyorkPepperoniPizza
+        pizza = new NewyorkPepperoniPizza();
       }
     } else if (pizzaStore === PizzaStore.chicago) {
       if (pizzaType === PizzaType.clam) {
-        pizza = new ChicagoClamPizza
+        pizza = new ChicagoClamPizza();
       } else if (pizzaType === PizzaType.pepperoni) {
-        pizza = new ChicagoPepperoniPizza
+        pizza = new ChicagoPepperoniPizza();
       }
     }
 
@@ -40,14 +37,13 @@ class AllPizzaStore {
 
     // ********************************************************* //
 
-    pizza?.prepare()
-    pizza?.bake()
-    pizza?.cut()
-    pizza?.box()
+    pizza?.prepare();
+    pizza?.bake();
+    pizza?.cut();
+    pizza?.box();
 
-    return pizza
-
+    return pizza;
   }
 }
 
-export default AllPizzaStore
+export default AllPizzaStore;

@@ -1,15 +1,15 @@
-import Command from "../command";
+import Command from '../command';
 
 class SimpleRemote {
-  private slot: Command | undefined
+  private slot: Command | undefined;
 
   setCommand(command: Command) {
-    this.slot = command
+    this.slot = command;
   }
 
   onButtonPress() {
-    this.slot?.execute()
+    this.slot?.execute();
   }
 }
 
-export default SimpleRemote
+export default SimpleRemote;
