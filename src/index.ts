@@ -1,3 +1,3 @@
-import run from './patterns/iterator';
+import run from './patterns/composite';
 
 run();

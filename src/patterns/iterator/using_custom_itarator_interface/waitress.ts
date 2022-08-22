@@ -28,6 +28,13 @@ class Waitress {
       console.log(`menu item: ${menuItem.name} for $${menuItem.price}`);
     }
   }
+
+  /* Just when we thought it was safe...Now they want to add a dessert submenu.Okay, 
+    now what? Now we have to support not only multiple menus, 
+    but menus within menus.It would be nice if we could just make 
+    the dessert menu an element of the DinerMenu collection, 
+    but that won’t work as it is now implemented. -> goto composite pattern
+  */
 }
 
 export default Waitress;
