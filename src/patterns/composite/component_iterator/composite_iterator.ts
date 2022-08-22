@@ -1,10 +1,10 @@
+import IterableArray from "../IterableArray"
 import Component from "../composite_classes/component"
 
 import { IteratorObject } from "./iterator_interfaces"
 
-
 class CompositeIterator implements IteratorObject<Component> {
-  private stack: Array<IteratorObject<Component>> = []
+  private stack: IterableArray<IteratorObject<Component>> = new IterableArray([])
 
   constructor(iterator: IteratorObject<Component>) {
     this.stack.push(iterator)
@@ -14,7 +14,7 @@ class CompositeIterator implements IteratorObject<Component> {
     if (this.stack.length === 0) {
       return false
     } else {
-      const iterator: IteratorObject<Component> = this.stack[this.stack.length - 1]
+      const iterator: IteratorObject<Component> = this.stack.peek()
       if (!iterator.hasNext()) {
         this.stack.pop()
         return this.hasNext()
@@ -26,12 +26,16 @@ class CompositeIterator implements IteratorObject<Component> {
 
   next(): Component | null {
     if (this.hasNext()) {
-      const iterator: IteratorObject<Component> = this.stack[this.stack.length - 1]
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      const component: Component = iterator.next()!
+      const iterator: IteratorObject<Component> = this.stack.peek()
+      const component: Component | null = iterator.next()
 
-      this.stack.push(component.createIterator())
-      return component
+      if (component) {
+        this.stack.push(component.createIterator())
+        return component
+      } else {
+        return null
+      }
+
     } else {
       return null
     }
